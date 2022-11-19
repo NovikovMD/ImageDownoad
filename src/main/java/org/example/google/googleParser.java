@@ -22,7 +22,7 @@ public class googleParser implements IParser {
     public Object parse(WebDriver driver, String topic, int count) throws InterruptedException {
 
         //parse
-        WebElement searchArea = driver.findElement(By.cssSelector("input[class='gLFyf gsfi']"));
+        WebElement searchArea = driver.findElement(By.cssSelector("input[class^='gLFyf']"));
         searchArea.sendKeys(topic);
         Thread.sleep(100);
 
